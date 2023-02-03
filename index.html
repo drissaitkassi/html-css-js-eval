@@ -15,7 +15,6 @@
 <br>
 
 <div class="wrapper">
-   
         <div class="container">
             <form name="form1">
                 <!-- formulaire info personnel -->
@@ -75,10 +74,13 @@
                         <div id="pro-activity"></div>
                 </fieldset>
                     <br></br>
-            
-        
+
+                <!-- la div synthese -->
                 <div id="divSynthese" style="display: none;"> 
+
                 </div>
+            
+                <!-- les buttons valider ,verifer , reinitialiser surprise -->
                     <input type="submit" value="Validez" />&nbsp;
                     <input type="button" value="Vérifiez" onclick="afficherInfosSaisies()"/>&nbsp;
                     <input type="reset" value="Réinitialisez"  />
@@ -90,13 +92,18 @@
         </div>
 </div>
 
-
+        <!-- j' ai laisser ce script dans la page html car j' utilise une library pour les animation qui utilise 
+            un lien CDN , 
+            j' ai opter pour le lien CDN pour que ca march sans installer la library ,
+            du coup je peux pas l'importer dans mon ficher js car la library n'ai pas installer 
+              -->
     <script>
         function showSurprise(){
             alert("Ah! On n\'est pas près d\'oublier \"\\n\" et tous ces caractère dits \"spéciaux\"! ");
             const container = document.getElementById('firecontainer')
             const fireworks = new Fireworks.default(container)
-            fireworks.start()}
+            fireworks.start()
+        }
     </script>
 
     <script src="script.js"></script>

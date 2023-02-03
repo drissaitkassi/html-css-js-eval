@@ -1,14 +1,24 @@
 body{
-
 margin: 0px;
 padding: 0px;
 background-color:beige;
 height:fit-content ;
 }
 
+/* style general des fieldset */
+fieldset{
+    height: fit-content;
+    margin-bottom: 10px;
+} 
+
+/* le wrraper est un div qui englobe  le container principale et le firecontainer */
+
 .wrapper{
     display: flex;
 }
+
+/* style du  container principale  */
+
 .container{
    
     padding: 10px;
@@ -20,15 +30,7 @@ height:fit-content ;
     background-color: white;
 
 }
-
-
-
-#firecontainer{
- align-items: flex-end;
-    width: 900px;
-    height: 100vh;
-  
-}
+/* style de la div qui contient le titre  */
 
 .title{
     padding-left: 10px;
@@ -41,9 +43,10 @@ height:fit-content ;
     width: 800px;
 }
 
-
-
-fieldset{
-    height: fit-content;
-    margin-bottom: 10px;
-}  
+/*  style du  firecontainer */
+/* animation bonus  */
+#firecontainer{
+    align-items: flex-end;
+       width: 900px;
+       height: 100vh;
+   }
