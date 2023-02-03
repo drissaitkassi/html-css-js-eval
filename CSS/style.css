@@ -1,0 +1,49 @@
+body{
+
+margin: 0px;
+padding: 0px;
+background-color:beige;
+height:fit-content ;
+}
+
+.wrapper{
+    display: flex;
+}
+.container{
+   
+    padding: 10px;
+    border: 3px;
+    border-style: solid;
+    border-color: black;
+    width: 800px;
+    height: fit-content;
+    background-color: white;
+
+}
+
+
+
+#firecontainer{
+ align-items: flex-end;
+    width: 900px;
+    height: 100vh;
+  
+}
+
+.title{
+    padding-left: 10px;
+    padding-right: 10px;
+    border: 3px;
+    border-style: solid;
+    border-color: black;
+    text-align: center;
+    background-color: rgb(119, 119, 248);
+    width: 800px;
+}
+
+
+
+fieldset{
+    height: fit-content;
+    margin-bottom: 10px;
+}  

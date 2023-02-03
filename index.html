@@ -1,0 +1,109 @@
+<!DOCTYPE html!>
+<html>
+<head>
+	<title>Web Basics - JS </title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="CSS/style.css">	
+    <link rel="icon" type="image/x-icon" href="/assets/constr.ico">
+</head>
+
+<body id="myBody" >
+	
+<div class="title">
+    <h1>Web Basics : Internet, Web, HTML, JavaScript </h1>
+</div>    
+<br>
+
+<div class="wrapper">
+   
+        <div class="container">
+            <form name="form1">
+                <!-- formulaire info personnel -->
+                <fieldset>
+                    <legend><strong> Info personnel</strong></legend>
+                    <table>
+                        <tr>
+                            <td>
+                                <label>Nom :</label>
+                            </td>
+                            <td>
+                                <input type="text" name="nom" id="nom" required placeholder="Saisissez votre mdp ici" onfocus="this.placeholder=''" onblur="this.placeholder='Saisissez l\'info ici'"/>
+                            </td>					
+                        </tr>
+                        <tr>
+                            <td>
+                                <label>Prenom : </label>
+                            </td>
+                            <td>
+                                <input type="text" name="prenom" id="prenom"  required placeholder="Saisissez votre mdp ici" onfocus="this.placeholder=''" onblur="this.placeholder='Saisissez l\'info ici'"/>
+                            </td>								
+                        </tr>
+                        <tr>
+                            <td>
+                                <label>Date Naissance  : </label>
+                            </td>
+                            <td>
+                                <input type="date" name="date-naissance" id="date-naissance" onblur="verifPwd()" />
+                            </td>					
+                        </tr>
+                    </table>					
+                </fieldset>
+            
+                <!-- formulaire info contact -->
+                <fieldset>
+                    <table>
+                    <legend><strong>Info Contact </strong> </legend>
+                    <label>Tel Domicile : </label><input type="text" name="mail" id="teldom"/><br></br>
+                    <label>Tel Portable : </label><input type="text" name="mail" id="telpor"  value="06 ."  /> <br></br>
+                    <label>Tel professionelle : </label><input type="text" name="mail" id="telpro"   onblur="handlePhoneVerification()" /> <br></br>
+                    <label>Adress Postale: </label><input type="text" name="mail" id="adrpos"/> <br></br>
+                    <tr>
+                        <td> <label>Code Postale: </label><input type="text" name="mail" id="codepos"  onblur="handleCityValue()"  /> <br></br></td>
+                        <td><label>Ville: </label><input type="text" name="mail" id="ville"/> <br></br></td>
+                    </tr>              
+                </table>
+                    <label>Votre adresse e-mail : </label><input type="text" name="mail" id="idMail" placeholder="psuedo@domain.extention" /> 
+                </fieldset>
+                <!-- formulaire activite professionelle -->
+                <fieldset >
+                    <legend><strong>Activite Professionnelle</strong></legend>
+                        <label>Profession : </label><br><br />
+                        <input id ="cadre" type="radio" name="news" value="cadre" onclick="handleCardeButtons()"/> Cadre 
+                        <input id="fonctionnaire" type="radio" name="news" value="fonctionnaire" onclick="handleFonctionButtons()" /> Fonctionnaire
+                        <input id="etudiant" type="radio" name="news" value="etudiant"  onclick="handleEtudiantButtons()"/> Etudiant
+                        <input id="patron"type="radio" name="news" value="patron" onclick="handlePatronButtons()" /> Patron<br />
+                        <div id="pro-activity"></div>
+                </fieldset>
+                    <br></br>
+            
+        
+                <div id="divSynthese" style="display: none;"> 
+                </div>
+                    <input type="submit" value="Validez" />&nbsp;
+                    <input type="button" value="Vérifiez" onclick="afficherInfosSaisies()"/>&nbsp;
+                    <input type="reset" value="Réinitialisez"  />
+                    <input type="button" value="Surprise!" onclick="showSurprise()" />
+            </form>
+        </div>
+        <div id="firecontainer">
+          
+        </div>
+</div>
+
+
+    <script>
+        function showSurprise(){
+            alert("Ah! On n\'est pas près d\'oublier \"\\n\" et tous ces caractère dits \"spéciaux\"! ");
+            const container = document.getElementById('firecontainer')
+            const fireworks = new Fireworks.default(container)
+            fireworks.start()}
+    </script>
+
+    <script src="script.js"></script>
+    <!-- jsDelivr  -->
+        <script src="https://cdn.jsdelivr.net/npm/fireworks-js@2.x/dist/index.umd.js"></script>
+
+        <!-- UNPKG -->
+        <script src="https://unpkg.com/fireworks-js@2.x/dist/index.umd.js"></script>
+</body>
+</html>
